@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acelera Imob - Captura de Leads & CRM Kanban</title>
+  <title>Calculadora Método Precisão - Acelera Imob</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Capture leads altamente qualificados para o mercado imobiliário e gerencie-os através de um painel Kanban interativo com a plataforma Acelera Imob.">
-  <meta name="keywords" content="crm imobiliario, capturar leads, kanban imobiliario, aceleraimob, funil de vendas, gestao de leads">
+  <meta name="description" content="Simule o funil de conversão de investimentos em anúncios para o mercado imobiliário. Calcule Leads, Agendamentos, Visitas, Vendas, Faturamento e ROAS com a Calculadora Método Precisão.">
+  <meta name="keywords" content="calculadora imobiliaria, funil de vendas, roas imobiliario, faturamento imobiliario, lead cpl">
   <meta name="author" content="Acelera Imob">
   
   <!-- Google Fonts -->
@@ -15,14 +15,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Custom CSS (Glows, Print, Scrollbar) -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   
   <!-- React & ReactDOM (Production) -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   
-  <!-- Babel Standalone (Para JSX em tempo de execução no navegador) -->
+  <!-- Babel Standalone (Para JSX) -->
   <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
   
   <!-- Tailwind CSS Play CDN -->
@@ -67,17 +67,20 @@
   
   <!-- Root Container for React -->
   <div id="root">
-    <!-- Loader Skeleton inicial antes do React montar -->
+    <!-- Loader Skeleton -->
     <div class="flex flex-col items-center justify-center min-h-screen">
       <div class="relative w-20 h-20">
         <div class="absolute inset-0 rounded-full border-4 border-brand-border"></div>
         <div class="absolute inset-0 rounded-full border-4 border-t-brand-cyan animate-spin"></div>
       </div>
-      <p class="mt-4 text-brand-cyan font-outfit font-semibold tracking-wider animate-pulse">Carregando Acelera Imob CRM...</p>
+      <p class="mt-4 text-brand-cyan font-outfit font-semibold tracking-wider animate-pulse">Carregando Calculadora Método Precisão...</p>
     </div>
   </div>
 
+  <!-- Sibling container for PDF Print Portal -->
+  <div id="print-proposal" class="hidden"></div>
+
   <!-- React Application Core Logic -->
-  <script type="text/babel" src="app.js?v=1.3"></script>
+  <script type="text/babel" src="calculadora.js?v=2.7"></script>
 </body>
 </html>

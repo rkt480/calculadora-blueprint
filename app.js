@@ -428,7 +428,7 @@ function App() {
           ) : (
             <div className="flex items-center space-x-3">
               <a
-                href="calculadora.html"
+                href="index.html"
                 className="bg-brand-card hover:bg-brand-cardHover border border-brand-border text-white text-xs font-bold font-outfit uppercase py-2.5 px-4 rounded-xl transition-all"
               >
                 Simulador de Vendas
