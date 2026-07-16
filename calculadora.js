@@ -717,10 +717,9 @@ function App() {
                             setCenario(scKey);
                             setIsCustomCPL(false);
                           }}
-                          className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-all ${isPresetActive ? 'border-brand-cyan bg-brand-cyan/15 text-white shadow-glow-cyan' : 'border-brand-border bg-brand-bg/30 text-brand-textMuted hover:text-white'}`}
+                          className={`flex items-center justify-center p-2.5 rounded-xl border text-center transition-all ${isPresetActive ? 'border-brand-cyan bg-brand-cyan/15 text-white shadow-glow-cyan' : 'border-brand-border bg-brand-bg/30 text-brand-textMuted hover:text-white'}`}
                         >
-                          <span className="text-[9px] uppercase font-bold tracking-wider mb-0.5">{scConfig.label}</span>
-                          <span className="text-xs font-extrabold">{formatBRLDecimals(presetVal)}</span>
+                          <span className="text-sm font-extrabold">{formatBRLDecimals(presetVal)}</span>
                         </button>
                       );
                     })}
