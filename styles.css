@@ -1,0 +1,221 @@
+/* styles.css */
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050c18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #152945;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Animations */
+@keyframes pulse-cyan {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+  }
+}
+
+.animate-pulse-cyan {
+  animation: pulse-cyan 3s infinite;
+}
+
+/* Custom background grid for modern feel */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(21, 41, 69, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 41, 69, 0.2) 1px, transparent 1px);
+}
+
+/* Glassmorphism card effect */
+.glass-card {
+  background: rgba(10, 22, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(21, 41, 69, 0.6);
+}
+
+/* Switch styling */
+.switch-input:checked + .switch-label {
+  background-color: #00f0ff;
+}
+.switch-input:checked + .switch-label .switch-dot {
+  transform: translateX(1.25rem);
+}
+
+/* Input custom range track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #152945;
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #00f0ff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+}
+
+/* Print Specific Rules for high-fidelity corporate PDF reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide active screen elements */
+  #root, .no-print {
+    display: none !important;
+  }
+
+  /* Make print-specific container visible */
+  #print-proposal {
+    display: block !important;
+  }
+
+  /* Page breaks and sizing */
+  .print-page {
+    page-break-after: always;
+    position: relative;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1.5cm 2cm;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .print-page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Printable headers and tables styling */
+  .print-header {
+    border-bottom: 2px solid #00f0ff;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+  }
+
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .print-table th, .print-table td {
+    border: 1px solid #e2e8f0;
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 9pt;
+  }
+
+  .print-table th {
+    background-color: #f8fafc !important;
+    font-weight: 600;
+  }
+
+  /* Force background colors in browsers when printing */
+  .bg-print-dark {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+  }
+
+  .bg-print-light {
+    background-color: #f1f5f9 !important;
+  }
+
+  .text-print-cyan {
+    color: #0284c7 !important; /* darker cyan for print legibility */
+  }
+
+  .text-print-green {
+    color: #166534 !important;
+  }
+
+  .text-print-red {
+    color: #991b1b !important;
+  }
+
+  .border-print-cyan {
+    border-color: #0284c7 !important;
+  }
+
+  .border-print-green {
+    border-color: #16a34a !important;
+  }
+
+  .border-print-red {
+    border-color: #dc2626 !important;
+  }
+}
+
+/* Kanban custom styles */
+.kanban-column {
+  min-height: 500px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.kanban-column.drag-over {
+  background-color: rgba(0, 240, 255, 0.05);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1) inset;
+}
+
+.kanban-card {
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kanban-card:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.kanban-card.dragging {
+  opacity: 0.5;
+  border-color: #00f0ff;
+}
+
+/* Custom Scrollbar for Kanban Board scroll horizontally */
+.kanban-board-container::-webkit-scrollbar {
+  height: 10px;
+}
+.kanban-board-container::-webkit-scrollbar-thumb {
+  background: #152945;
+  border-radius: 6px;
+}
+.kanban-board-container::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
